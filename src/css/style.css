@@ -1,4 +1,7 @@
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     min-height: 100vh;
     width: 100%;
     overflow-x: hidden;
@@ -7,6 +10,11 @@ body {
     font-weight: 600;
     font-size: 14px;
     line-height: 21px;
+    background-color: #FFF7EB;
+}
+
+main {
+    width: 100%;
 }
 
 .wrapper {
@@ -33,6 +41,7 @@ body {
     line-height: 27px;
     transition: 0.5s;
     cursor: pointer;
+    color: #402E32;
 }
 
 /*--------------------------------HEADER*/
@@ -154,7 +163,7 @@ body {
     align-items: center;
     height: 720px;
     width: 100%;
-    color: #636e72;
+    color: #402E32;
 
 }
 
@@ -195,8 +204,8 @@ body {
     justify-content: center;
     position: relative;
     width: 100%;
-    height: 450px;
-    margin-top: 50px;
+    height: 480px;
+    margin-top: 10px;
 }
 
 .slider_btn {
@@ -236,13 +245,14 @@ body {
     justify-content: center;
     padding: 0px 10px;
     width: 90%;
-    height: 420px;
+    height: 470px;
     margin: 10px;
     border-radius: 5px;
     -webkit-box-shadow: 1px 3px 9px -4px rgba(0,0,0,0.75);
     -moz-box-shadow: 1px 3px 9px -4px rgba(0,0,0,0.75);
     box-shadow: 1px 3px 9px -4px rgba(0,0,0,0.75);
-    background: linear-gradient(87.86deg, #FEC38E 26.56%, #9A2F00 146.12%);
+    background-color: #F8BB86;
+    /* background: linear-gradient(87.86deg, #FEC38E 26.56%, #9A2F00 146.12%); */
 }
 
 .goods_slider-item {
@@ -267,7 +277,7 @@ body {
 }
 
 .goods_slider-item--img {
-    height: 60%;
+    height: 55%;
     width: 75%;
     padding: 3px;
     border: 1px solid #b2bec3;
@@ -281,4 +291,142 @@ body {
 
 .good_slider-item--descr {
     font-size: 12px;
+}
+
+
+/*INFO*/
+
+.info_page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 720px;
+    margin-top: 30px;
+    color: #402E32;
+}
+
+.info_page_container {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+.info_page_header {
+    text-align: center;
+    font-size: 45px;
+    line-height: 82px;
+    border-bottom: 2px solid #b2bec3;
+}
+
+.info_slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    margin-top: 15px;
+    position: relative;
+}
+
+.info_page-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 90%;
+    -webkit-box-shadow: 0px 2px 12px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 12px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 12px -3px rgba(0,0,0,0.75);
+    background-color: white;
+    border-radius: 2px;
+}
+
+.info_page-slider--item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95%;
+    width: 95%;
+    margin: 5px;
+}
+
+.info_page-slider--item img {
+    height: 95%;
+    width: 45%;
+    margin: 0px 40px;
+}
+
+.info_page-slider--item p {
+    height: 65%;
+    width: 45%;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: left;
+    margin: 0px 40px;
+}
+
+
+/*CONTACT FORM*/
+
+.contact_form_page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    height: 580px;
+    width: 100%;
+}
+
+.contact_form_container {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.contact_form-header {
+    font-size: 45px;
+    line-height: 82px;
+    border-bottom: 2px solid #b2bec3;
+}
+
+
+.contact_field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+}
+
+.contact_form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 90%;
+    /* justify-content: space-between; */
+}
+
+.contact_form input {
+    height: 50px;
+    width: 350px;
+    border-radius: 10px;
+    border: none;
+    font-family: inherit;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin: 0px 30px;
+}
+.contact_form input:focus {
+    outline: none;
+}
+
+/*------------------------------------FOOTER*/
+
+.footer {
+    height: 140px;
+    width: 100%;
+    background-color: #402E32;
+    border: 1px solid black;
 }
