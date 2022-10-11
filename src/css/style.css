@@ -93,6 +93,11 @@ main {
 
 .header_nav-list-item {
     margin: 0px 40px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+.header_nav-list-item:hover {
+    border-bottom: 1px solid white;
 }
 
 .header_login_btn {
@@ -510,4 +515,5 @@ main {
 .social_media-item img {
     height: 50px;
     width: 50px;
+    cursor: pointer;
 }
