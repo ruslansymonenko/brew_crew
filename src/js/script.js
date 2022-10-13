@@ -8,4 +8,6 @@ window.addEventListener('DOMContentLoaded', () => {
     anchors();
     goodsSlider('.goods_slider', '.goods_slider-line', '.goods_slider-item');
     infoSlider('.info_page-slider', '.info_slider-line', '.info_page-slider-item');
+
+    console.log('yes');
 })
