@@ -87,18 +87,31 @@ Template Name: home
 
                         <div class="info_page-slider">
                             <div class="info_slider-line">
-                                <div class="info_page-slider-item">
-                                    <img src="<?php bloginfo('template_url'); ?>/src/assets/img/info-page-slider/beer-bottles.jpg" alt="">
-                                    <p>У нас у магазині ви можете придбати пиво із різних куточків світу. Ми ретельно відбираємо свій асортимент, щоб ви могли насолодитися тільки кращими сортами пива.</p>
-                                </div>
-                                <div class="info_page-slider-item">
-                                    <img src="<?php bloginfo('template_url'); ?>/src/assets/img/info-page-slider/beer-bar.jpg" alt="">
-                                    <p>Також ви можете скуштувати різноманітні сорти пива в нашому барі</p>
-                                </div>
-                                <div class="info_page-slider-item">
-                                    <img src="<?php bloginfo('template_url'); ?>/src/assets/img/info-page-slider/beer-img.jpg" alt="">
-                                    <p>Ми відбираємо найякісніше пиво для наших клієнтів. Приходь до нас та переконайся сам</p>
-                                </div>
+                                <?php
+                                global $post;
+
+                                $myposts = get_posts([ 
+                                    'numberposts' => 5,
+                                ]);
+
+                                if( $myposts ){
+                                    foreach( $myposts as $post ){
+                                        setup_postdata( $post );
+                                        ?>
+                                        
+                                        <div class="info_page-slider-item">
+                                            <img src="<?php the_post_thumbnail(); ?>">
+                                            <p><?php the_content(); ?></p>
+                                        </div>
+
+                                        <?php 
+                                    }
+                                } else {
+                                
+                                }
+
+                                wp_reset_postdata();
+                                ?>
                             </div>
                         </div>
                     </div>
