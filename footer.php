@@ -4,13 +4,13 @@
                     <h4>Ми у соц. мережах</h4>
                     <ul class="social_media">
                         <li class="social_media-item">
-                            <img src="./src/assets/icons/social-media/logo_telegram.png" alt="">
+                            <img src="<?php bloginfo('template_url'); ?>/src/assets/icons/social-media/logo_telegram.png" alt="">
                         </li>
                         <li class="social_media-item">
-                            <img src="./src/assets/icons/social-media/logo_instagram.png" alt="">
+                            <img src="<?php bloginfo('template_url'); ?>/src/assets/icons/social-media/logo_instagram.png" alt="">
                         </li>
                         <li class="social_media-item">
-                            <img src="./src/assets/icons/social-media/logo_facebook.png" alt="">
+                            <img src="<?php bloginfo('template_url'); ?>/src/assets/icons/social-media/logo_facebook.png" alt="">
                         </li>
                     </ul>
                 </div>

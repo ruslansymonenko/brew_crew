@@ -12,7 +12,7 @@
 
 
         function add_type_attribute($tag, $handle, $src) {
-            if ( 'main' !== $handle ) {
+            if ( 'main' !== $handle AND 'info-slider' !== $handle AND 'header-scroll' !== $handle AND 'anchors' !== $handle AND 'goods-slider' !== $handle) {
                 return $tag;
             }
 

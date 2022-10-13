@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php language_attributes(); ?>">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,7 +14,7 @@
         <header class="header">
             <div class="container header_container">
                 <div class="header_logo">
-                    <img src="./src/assets/icons/main_icon.png" alt="">
+                    <img src="<?php bloginfo('template_url'); ?>/src/assets/icons/main_icon.png" alt="">
                     <a href="#mainPage"><span>Brew Crew</span></a>
                 </div>
 
@@ -30,7 +30,7 @@
                 </nav>
 
                 <button class="header_login_btn">
-                    <img src="./src/assets/icons/user_logo_icon.png" alt="">
+                    <img src="<?php bloginfo('template_url'); ?>/src/assets/icons/user_logo_icon.png" alt="">
                 </button>
             </div>
         </header>
