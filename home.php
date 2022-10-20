@@ -128,11 +128,12 @@ Template Name: home
                 <div class="container contact_form_container">
                     <h2 class="contact_form-header">Контактна форма</h2>
                     <div class="contact_field">
-                        <form action="#" class="contact_form">
-                            <input type="text" placeholder="Ваше ім'я">
-                            <input type="text" placeholder="Ваш телефон">
-                            <button class="btn">Надіслати</button>
-                        </form>
+                        <div class="contact_form">
+                            <?php echo do_shortcode('[contact-form-7 id="49" title="Контактная форма"]') ?>
+                            <!-- <input class="contact_input" type="text" placeholder="Ваше ім'я">
+                            <input class="contact_input" type="tel" placeholder="Ваш телефон">
+                            <button class="btn contact_btn">Надіслати</button> -->
+                        </div>
                     </div>
                 </div>
 

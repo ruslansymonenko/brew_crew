@@ -509,7 +509,7 @@ main {
     width: 90%;
 }
 
-.contact_form input {
+.contact_input {
     height: 50px;
     width: 350px;
     border-radius: 10px;
@@ -519,7 +519,7 @@ main {
     padding: 5px 10px;
     margin: 0px 30px;
 }
-.contact_form input:focus {
+.contact_input {
     outline: none;
 }
 
