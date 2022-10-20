@@ -49,6 +49,7 @@ export function goodsSlider (sliderContainer, line, slideItems) {
     }
 
     putSlideNum(slides);
+    setSlides(0, 2, slides);
 
     prevSlideBtn.addEventListener('click', () => {
         prevSlides(slides);

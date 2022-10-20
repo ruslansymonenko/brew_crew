@@ -43,31 +43,36 @@ Template Name: home
 
                         <div class="goods_slider">
                             <div class="goods_slider-line">
-                                <div class="goods_slider-item-active goods_slider-item">
-                                    <img src="<?php bloginfo('template_url'); ?>/src/assets/img/goods/corona.jpg" alt="" class="goods_slider-item--img">
-                                    <h3 class="goods_slider-item--name">Corona Extra</h3>
-                                    <p class="good_slider-item--descr">Особливе мексиканське пиво "Corona Extra" ("Корона Екстра") п'ється по-особливому легко й приємно. Світле пиво, що освіжає, прийнято подавати зі шматочком лайма.</p>
-                                </div>
-                                <div class="goods_slider-item-active goods_slider-item">
-                                    <img src="<?php bloginfo('template_url'); ?>/src/assets/img/goods/stella-artois.jpg" alt="" class="goods_slider-item--img">
-                                    <h3 class="goods_slider-item--name">Stella Artois</h3>
-                                    <p class="good_slider-item--descr">Лагер преміального типу Стелла Артуа має величезну популярність у всьому світі. Завдяки особливому рецепту та способу приготування, напій став легко впізнаваним та улюбленим.</p>
-                                </div>
-                                <div class="goods_slider-item-active goods_slider-item">
-                                    <img src="<?php bloginfo('template_url'); ?>/src/assets/img/goods/flensburger-pilsener.jpg" alt="" class="goods_slider-item--img">
-                                    <h3 class="goods_slider-item--name">Flensburger</h3>
-                                    <p class="good_slider-item--descr">Унікальне своєрідне німецьке пиво «Flensburger» («Фленсбургер») представлене у спеціальній скляній пляшці з пробкою, яка краще зберігає смак та аромат напою. Пиво має солом'яний колір та стандартну для німців суху структуру.</p>
-                                </div>
-                                <div class="goods_slider-item">
-                                    <img src="<?php bloginfo('template_url'); ?>/src/assets/img/goods/bavaria.jpg" alt="" class="goods_slider-item--img">
-                                    <h3 class="goods_slider-item--name">Bavaria</h3>
-                                    <p class="good_slider-item--descr">Bavaria Holland 5% 0,5 л – унікальний напій золотисто-солом'яного відтінку з густою стійкою шапкою піни. Присмак пива плавний, вершковий, заможний, з енергійними хмільними, трав'яними та лимонними акордами</p>
-                                </div>
-                                <div class="goods_slider-item">
-                                    <img src="<?php bloginfo('template_url'); ?>/src/assets/img/goods/grimbergen.jpg" alt="" class="goods_slider-item--img">
-                                    <h3 class="goods_slider-item--name">Grimbergen Blonde</h3>
-                                    <p class="good_slider-item--descr">Насичене нефільтроване пиво Grimbergen Blonde («Грімберген Блонд») можна порівняти з відомим бельгійським елем. Пиво зварене методом верхового бродіння, воно має середню міцність (5-7%)</p>
-                                </div>
+                            <?php
+                                global $post;
+
+                                $myposts = get_posts([ 
+                                    'numberposts' => -1,
+                                    'category_name' => 'goods-slider'
+                                ]);
+
+                                if( $myposts ){
+                                    foreach( $myposts as $post ){
+                                        setup_postdata( $post );
+                                        ?>
+                                        
+                                        <div class="goods_slider-item-active goods_slider-item">
+                                            <?php the_post_thumbnail(
+                                                array('70%', '60%'),
+                                                array('class' => 'goods_slider-item--img')
+                                            ); ?> 
+                                            <h3 class="goods_slider-item--name"><?php the_title(); ?></h3>
+                                            <div class="good_slider-item--descr"><?php the_content(); ?></div>
+                                        </div>
+
+                                        <?php 
+                                    }
+                                } else {
+                                
+                                }
+
+                                wp_reset_postdata();
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -91,7 +96,8 @@ Template Name: home
                                 global $post;
 
                                 $myposts = get_posts([ 
-                                    'numberposts' => 5,
+                                    'numberposts' => -1,
+                                    'category_name' => 'info-slider'
                                 ]);
 
                                 if( $myposts ){
@@ -100,8 +106,8 @@ Template Name: home
                                         ?>
                                         
                                         <div class="info_page-slider-item">
-                                            <img src="<?php the_post_thumbnail(); ?>">
-                                            <p><?php the_content(); ?></p>
+                                            <?php the_post_thumbnail(); ?> 
+                                            <?php the_content(); ?>
                                         </div>
 
                                         <?php 
