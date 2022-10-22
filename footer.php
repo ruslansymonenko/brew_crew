@@ -16,7 +16,7 @@
                 </div>
                 <div class="footer_info footer_contacts">
                     <h4>Контакти</h4>
-                    <p>+38096123321</p>
+                    <p class="main_phone"><?php the_field('phone'); ?></p>
                     <p>brewcrew@gmail.com</p>
                 </div>
                 <div class="footer_info footer_adress">
